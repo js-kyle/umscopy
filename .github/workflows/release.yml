@@ -124,7 +124,6 @@ jobs:
         with:
           distribution: 'liberica'
           java-version: '17'
-          java-package: 'jre'
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4
         with:
@@ -141,7 +140,7 @@ jobs:
 
           #! Build MacOS
 
-          ls /Users/runner/hostedtoolcache/Java_Liberica_jre/17.0.3-7/x64
+          ls /Users/runner/hostedtoolcache/Java_Liberica_jdk/17.0.3-7/
           sudo cp -a /Users/runner/hostedtoolcache/Java_Liberica_jre/17.0.3-7/x64/. /Library/Java/JavaVirtualMachines/liberica-jre-17.jre
 
           ls /Library/Java/JavaVirtualMachines/*

@@ -141,8 +141,8 @@ jobs:
 
           #! Build MacOS
 
-          # ls /Users/runner/hostedtoolcache/Java_Liberica_jdk/17.0.3-7/x64/
-          # cp -a /Users/runner/hostedtoolcache/Java_Liberica_jdk/17.0.3-7/x64/. /Library/Java/JavaVirtualMachines/liberica-jre-17.jre
+          ls /Users/runner/hostedtoolcache/Java_Liberica_jre/17.0.3-7/x64
+          sudo cp -a /Users/runner/hostedtoolcache/Java_Liberica_jre/17.0.3-7/x64/. /Library/Java/JavaVirtualMachines/liberica-jre-17.jre
 
           ls /Library/Java/JavaVirtualMachines/*
           mkdir macos-builds

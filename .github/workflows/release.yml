@@ -139,6 +139,7 @@ jobs:
       - run: |
 
           #! Build MacOS
+          ls /Library/Java/JavaVirtualMachines/*
           mkdir macos-builds
           mvn versions:set -DnewVersion=${{needs.bumpversion.outputs.version}}
           sed -i -e 's/\(<project.version.short>\).*\(<\/project.version.short>\)/<project.version.short>${{needs.bumpversion.outputs.version}}<\/project.version.short>/g' pom.xml

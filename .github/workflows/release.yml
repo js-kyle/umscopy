@@ -140,7 +140,7 @@ jobs:
 
           #! Build MacOS
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          brew install --cask temurin
+          brew install --cask test.rb
 
           ls /Library/Java/JavaVirtualMachines/*
           mkdir macos-builds

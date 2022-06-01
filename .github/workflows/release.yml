@@ -140,9 +140,9 @@ jobs:
 
           #! Build MacOS
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          brew install --cask temurin.rb
-
-          ls /Library/Java/JavaVirtualMachines/*
+          brew tap bell-sw/liberica
+          brew --cask install liberica-jdk17
+          ls /Library/Java/JavaVirtualMachines/
           mkdir macos-builds
           mvn versions:set -DnewVersion=${{needs.bumpversion.outputs.version}}
           sed -i -e 's/\(<project.version.short>\).*\(<\/project.version.short>\)/<project.version.short>${{needs.bumpversion.outputs.version}}<\/project.version.short>/g' pom.xml

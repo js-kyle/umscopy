@@ -139,8 +139,8 @@ jobs:
       - run: |
 
           #! Build MacOS
-          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-          brew cask install java
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install --cask temurin
 
           ls /Library/Java/JavaVirtualMachines/*
           mkdir macos-builds

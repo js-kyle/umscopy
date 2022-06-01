@@ -171,7 +171,7 @@ jobs:
 
           #! Prepare Changelog
           npm i extract-changelog-release -g
-          npm extract-changelog-release CHANGELOG.md > release.txt
+          extract-changelog-release CHANGELOG.md > release.txt
           awk 's{ print ""; print}; $0~v {print; s=1; next}; s=0' RS= v="${{needs.bumpversion.outputs.version}}" CHANGELOG.txt > release.txt
           increment_version() {
             local delimiter=.

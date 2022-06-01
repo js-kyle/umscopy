@@ -141,7 +141,7 @@ jobs:
           #! Build MacOS
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           brew tap bell-sw/liberica
-          brew --cask install liberica-jdk17
+          brew install --cask liberica-jdk17
           ls /Library/Java/JavaVirtualMachines/
           mkdir macos-builds
           mvn versions:set -DnewVersion=${{needs.bumpversion.outputs.version}}

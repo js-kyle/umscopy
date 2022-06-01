@@ -1,5 +1,9 @@
 # Changelog
 
+## [11.0.2]
+### General
+- Test
+
 ## [11.0.0 - since 10.21.1](https://github.com/UniversalMediaServer/UniversalMediaServer/compare/10.21.1...main)
 ### General
 - Uses image backgrounds and logos for movies, TV series and episodes on the web interface
